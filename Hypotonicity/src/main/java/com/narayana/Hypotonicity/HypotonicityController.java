@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HypotonicityController {
 	@Autowired
-	HypotonictyRepository hypertonicrepository;
+	HypotonicityRepository hypotoncityrepository;
 	
 	protected Logger logger = Logger
 			.getLogger(HypotonicityController.class.getName());
@@ -19,7 +19,7 @@ public class HypotonicityController {
 	@RequestMapping("/hypotonicity/{serumOsmol}")
 	public String hypotonicity(@PathVariable("serumOsmol") String serumOsmol) {
 		logger.info("accounts-changed byId() invoked: " + serumOsmol);
-		String retVal = hypertonicrepository.gethypotonicity(serumOsmol);
+		String retVal = hypotoncityrepository.gethypotonicity(serumOsmol);
 		logger.info("accounts-microservice byId() found: " + retVal);
 		return retVal;
 	}

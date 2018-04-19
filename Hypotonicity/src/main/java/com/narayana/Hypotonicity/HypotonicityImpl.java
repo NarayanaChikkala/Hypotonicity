@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class HypotonicityImpl implements HypotonictyRepository {
+public class HypotonicityImpl implements HypotonicityRepository {
 	protected Logger logger = Logger
 			.getLogger(HypotonicityImpl.class.getName());
 
@@ -14,7 +14,7 @@ public class HypotonicityImpl implements HypotonictyRepository {
 	@Override
 	public String gethypotonicity(String serumOsmol) {
 		// TODO Auto-generated method stub
-		if(Integer.parseInt(serumOsmol)>=295) {
+		if(Integer.parseInt(serumOsmol)<=280) {
 			return "hypotonic";			
 		}
 		else {
